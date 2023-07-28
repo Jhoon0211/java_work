@@ -1,0 +1,33 @@
+package basic_p;
+
+import java.util.Arrays;
+
+public class ArgsMain {
+
+	public static void main(String[] args) {
+		System.out.println("내가 argsMain 이다. : " + args.length);
+		
+		System.out.println(Arrays.toString(args));		
+		short a;
+		byte b;
+		int c;
+		long d;
+		
+		String e;
+		char f;
+		
+		
+		for (String str : args) {
+			if(args == ???) {
+				
+			} else {
+				
+			}
+			System.out.println(str);
+		}
+		
+		
+		System.out.println("argsMain 끝");
+	}
+
+}

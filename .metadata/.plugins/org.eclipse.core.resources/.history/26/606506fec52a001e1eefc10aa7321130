@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+
+	HttpJspPage page2 = (HttpJspPage)page;
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04_page</title>
+</head>
+<body>
+<h1>04_page</h1>
+
+this : <%=this %> <br/>
+page1 : <%=page %> <br/>
+page2 : <%=page2 %> <br/>
+
+servletInfo: <%=page2.getServletInfo() %> <br/>
+servletInfo: <%=page2.getServletName() %> <br/>
+</body>
+</html>

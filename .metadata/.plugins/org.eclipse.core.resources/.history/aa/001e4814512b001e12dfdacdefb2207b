@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>aaa 입니다.</h1>
+<%
+try{
+	int a = 10/0;
+
+	out.println("정상 실행" + a);
+}catch(ArithmeticException e){
+	out.println("수학적 에러 처리" + e.getMessage());
+}
+%>
+</body>
+</html>

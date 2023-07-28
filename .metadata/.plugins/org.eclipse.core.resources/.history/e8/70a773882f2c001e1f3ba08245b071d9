@@ -1,0 +1,40 @@
+package basic_p;
+
+import java.util.Arrays;
+
+public class ArgsMain {
+
+	public static void main(String[] args) {
+		System.out.println("내가 argsMain 이다. : " + args.length);
+		
+		// System.out.println(Arrays.toString(args));		
+		
+		// 합계
+		for (String str : args) {
+			int sum = 0;
+			int intValue = Integer.parseInt(str);
+			if(intValue % 2 == 0) {
+				System.out.println(str);
+				sum += intValue;
+				System.out.println(intValue);
+			} 
+			
+		}
+		
+		// 평균
+		for (String str : args) {
+			int avg = 0;
+			int intAvg = Integer.parseInt(str);
+			if(intValue % 2 == 0) {
+				System.out.println(str);
+				sum += intValue;
+				System.out.println(intValue);
+			} 
+			
+		}
+		
+		
+		//System.out.println("argsMain 끝");
+	}
+
+}

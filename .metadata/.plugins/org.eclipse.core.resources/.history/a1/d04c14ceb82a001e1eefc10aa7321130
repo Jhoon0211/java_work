@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03_third</title>
+</head>
+<body>
+<h1>03_third</h1>
+
+<%!
+
+	// declaration : 클래스 정의부
+	
+	// 멤버 변수
+	String name = "나는 문어";
+	int age = 27;
+	boolean marriage = true;
+	
+	void meth_1(){
+		System.out.println("meth_01() 실행" + name);
+	}
+	
+	// System.out.println("정의부에서 실행구문 불가");
+%>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+package basic_p;
+
+public class trycatchTSN {
+
+	public static void main(String[] args) {
+		
+		
+		try {
+		
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+}

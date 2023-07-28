@@ -1,0 +1,13 @@
+INDEX VERSION 1.132
+C:\green_project\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3045101612.index
+\jspProj\src\main\java
+C:\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3045101612.index
+\jspProj\src\main\java
+C:\green_project\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3674086039.index
+\jspProj\src\main\java
+C:\green_project\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1188494232.index
+\jspProj\src\main\java
+C:\green_project\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\326206460.index
+\jspProj\src\main\java
+C:\green_project\java_work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3094211163.index
+\jspProj\src\main\java

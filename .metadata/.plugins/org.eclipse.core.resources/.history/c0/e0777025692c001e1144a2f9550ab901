@@ -1,0 +1,63 @@
+<%@page import="java.util.Arrays"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	
+	// 배열 가져오기
+	String[] nameArr = request.getParameterValues("name");
+	String[] korArr = request.getParameterValues("kor");
+	String[] engArr = request.getParameterValues("eng");
+	String[] mathArr = request.getParameterValues("math");
+	
+	
+	// 국어 총점
+    int korsum = 0; // 총점
+  
+    for (String str : korArr) { // noArr String 명을 str로 설정
+        int num = Integer.parseInt(str); // str을 정수형으로 형변환
+        korsum += num;
+    }
+    
+    // 영어 총점
+    int engsum = 0; // 총점
+    
+    for (String str : engArr) { // noArr String 명을 str로 설정
+        int num = Integer.parseInt(str); // str을 정수형으로 형변환
+        engsum += num;
+    }
+    
+    // 수학 총점
+    int mathsum = 0; // 총점
+    
+    for (String str : mathArr) { // noArr String 명을 str로 설정
+        int num = Integer.parseInt(str); // str을 정수형으로 형변환
+        mathsum += num;
+    }
+    
+%>
+
+<h1>numReg</h1>
+
+
+korArr:<%=Arrays.toString(korArr) %><br/>
+국어점수 총 합 : <%=korsum %> 점</br>
+영어점수 총 합 : <%=engsum %> 점</br>
+수학점수 총 합 : <%=mathsum %> 점</br>
+
+학생 1의 점수 : <%=korArr[0] + engArr[0] + mathArr[0] %>
+학생 2의 점수 : <%=korArr[1] + engArr[1] + mathArr[1] %>
+학생 3의 점수 : <%=korArr[2] + engArr[2] + mathArr[2] %>
+학생 4의 점수 : <%=korArr[3] + engArr[3] + mathArr[3] %>
+학생 5의 점수 : <%=korArr[4] + engArr[4] + mathArr[4] %>
+<%-- 영어점수 총합 engArr:<%=Arrays.toString(korArr) %><br/>
+수학점수 총합 mathArr:<%=Arrays.toString(korArr) %><br/> --%>
+
+</body>
+</html>

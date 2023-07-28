@@ -1,0 +1,20 @@
+package oops_p;
+
+class AAA{
+	int a = 10;
+	int b = 20;
+	int sa = 1111;
+	
+	public AAA() {
+		
+		System.out.println("AAA 기본 생성자");
+	}
+}
+
+public class instanceMain {
+
+	public static void main(String[] args) {
+			
+	}
+
+}

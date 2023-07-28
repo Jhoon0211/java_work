@@ -1,0 +1,19 @@
+package basic_p;
+
+public class CalcMain {
+
+	public static void main(String[] args) {
+		int a = 5;
+		a++;
+		System.out.println("1:" + +a);
+
+		++a;
+		System.out.println("2:" + a);
+		System.out.println("3:" + a++);
+		System.out.println("4:" + +a);	// 출력 먼저
+		System.out.println("5:" + --a); // 더하기 먼저 
+		System.out.println("6:" + a);
+		
+	}
+
+}

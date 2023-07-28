@@ -1,0 +1,13 @@
+package oops_p;
+
+public class ExamMain {
+
+	public static void main(String[] args) {
+		
+		String [] names = {"현빈","원빈","투빈","장희빈","미스터빈"};
+		
+		String [] kor = "7,9,6,8,2".split(",");
+		
+	}
+
+}

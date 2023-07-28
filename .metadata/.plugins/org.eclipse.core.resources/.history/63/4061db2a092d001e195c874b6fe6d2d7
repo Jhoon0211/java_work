@@ -1,0 +1,8 @@
+package oops_p;
+
+public class Exam {
+	
+	String name, grade;
+	int [] jum;
+	int tot, avg;
+}

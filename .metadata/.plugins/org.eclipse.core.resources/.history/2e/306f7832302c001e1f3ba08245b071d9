@@ -1,0 +1,42 @@
+package basic_p;
+
+import java.util.Arrays;
+
+public class ArgsMain {
+
+	public static void main(String[] args) {
+		System.out.println("내가 argsMain 이다. : " + args.length);
+		
+		// System.out.println(Arrays.toString(args));		
+		
+		// 합계
+		for (String str : args) {		// arg를 str에 담는다
+			int intValue = Integer.parseInt(str); // args 숫자로 변환
+			int sum = 0; // sum 변수 초기화, sum = 숫자 중 짝수들의 합으로 설정
+			if(intValue % 2 == 0) { // 입력받은 intValue 값이 만약 짝수이면
+				
+				System.out.println("짝수 값 : " + str); // arg중 짝수인 값을 표출
+				sum += intValue;	// 
+				System.out.println("합계 : " + intValue);
+			} 
+			
+		}
+		
+		// 평균
+		/* for (String str : args) {
+			int avg = 0; // 
+			int intAvg = Integer.parseInt(str);
+			int evenLength =  
+			if(intAvg % 2 == 0) {
+				System.out.println(str);
+				avg / avg.length = intAvg;
+				System.out.println(intValue);
+			} 
+			
+		} */
+		
+		
+		//System.out.println("argsMain 끝");
+	}
+
+}

@@ -1,0 +1,13 @@
+127.0.0.1 - - [28/Jul/2023:09:43:04 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:09:43:04 +0900] "GET /jspProj/request/numForm2.jsp HTTP/1.1" 200 1754
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:09:43:04 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:09:43:21 +0900] "GET /jspProj/request/numReg2.jsp?name=6name&kor=99&eng=26&math=74&name=4name&kor=71&eng=74&math=72&name=1name&kor=41&eng=61&math=68&name=5name&kor=71&eng=18&math=34&name=1name&kor=40&eng=10&math=13 HTTP/1.1" 200 2403
+127.0.0.1 - - [28/Jul/2023:14:30:05 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:14:30:05 +0900] "GET /jspProj/basic/First HTTP/1.1" 200 28
+127.0.0.1 - - [28/Jul/2023:15:19:17 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:15:19:17 +0900] "GET /jspProj/WEB-INF/classes/oops_p/Exam.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:15:19:21 +0900] "GET /jspProj/WEB-INF/classes/oops_p/Exam.java HTTP/1.1" 404 721
+127.0.0.1 - - [28/Jul/2023:15:19:34 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:15:19:34 +0900] "GET /jspProj/WEB-INF/classes/oops_p/Exam.java HTTP/1.1" 404 721
+127.0.0.1 - - [28/Jul/2023:16:04:49 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [28/Jul/2023:16:04:49 +0900] "GET /jspProj/WEB-INF/classes/oops_p/Exam.java HTTP/1.1" 404 721
