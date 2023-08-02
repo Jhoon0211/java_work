@@ -1,0 +1,14 @@
+package oops_p;
+
+public class num_res {
+
+	// 이름, 주민번호 선언
+	String name;
+	int num_res;
+
+	public void numCalc(String name, int num_res) {
+		this.num_res = num_res;
+		
+	}
+}
+

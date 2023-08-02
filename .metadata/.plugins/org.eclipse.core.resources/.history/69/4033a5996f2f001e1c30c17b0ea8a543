@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>examForm</h1>
+	<form action="examReg.jsp">
+		<table border="">
+			<tr>
+				<td>이름</td>
+				<td>점수</td>
+				<td>총합</td>
+				<td>평균</td>
+				<td>등급</td>
+				<td>순위</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

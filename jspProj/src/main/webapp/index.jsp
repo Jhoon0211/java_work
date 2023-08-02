@@ -23,4 +23,9 @@
 </body>
 <h2>request</h2>
 <a href="request/numForm.jsp">numForm</a>
+<a href="request/numForm.jsp">numForm</a>
+<h2>view</h2>
+<a href="redirect/a.jsp?nick=ccc">redirect</a>
+<a href="forward/a.jsp?nick=ccc">forward</a>
+<a href="include/a.jsp?nick=ccc">include</a>
 </html>

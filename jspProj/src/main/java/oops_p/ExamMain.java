@@ -18,6 +18,7 @@ public class ExamMain {
 		// 현재 배열은 비어있는 상태임 - 객체가 들어갈 칸과, 객체 자체는 다른 것임
 		// 각 칸에 원소를 넣어야 함
 		
+		// 이름의 개수만큼 arr이라는 배열을 만든다 즉 5개 만든다는 뜻 임 
 		Exam [] arr = new Exam[names.length];
 		
 		System.out.println(arr);	// 주소값
@@ -47,16 +48,24 @@ public class ExamMain {
 		for(int i = 0; i < arr.length; i++) {
 			// arr[i] = ex0;
 			arr[i] = new Exam(names[i], kor[i], eng[i], mat[i]);
-
-			// rank를 받아라
 			
 		}
-		System.out.println(arr[0].rank);
-		System.out.println(arr[1].rank);
+		
+		// rank를 받아라
+		for (Exam exam : arr) {
+            exam.rankCalc(arr);
+        }
+		
+		// 결과 출력
+        for (Exam exam : arr) {
+            System.out.println(exam);
+        }
+        
+		System.out.println(arr[0]);
+		System.out.println(arr[1]);
 		System.out.println(arr[2]);
 		System.out.println(arr[3]);
 		System.out.println(arr[4]);
 		
 	}
-
 }
