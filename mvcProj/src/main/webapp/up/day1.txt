@@ -1,0 +1,120 @@
+instance (객체) - 부품간에 서로 소통 통신
+member, method, message들을 묶은 것 -> class (instance들의 모임)
+
+
+
+* 인스턴스 작동 -  class '정의' -> instance 변수 '선언' -> instance '생성' -> instance 변수 '호출'
+ = 클래스의 정의부에 instance '생성' - 'init( )' - 'service' :(doGet, doPost( )) - 'destroy( )' 
+ = 스크립트에도 클래스의 정의 형태로 그대로 있어야 함
+
+
+서버 - 클라이언트에게 서비스를 제공 (프로그램이 무한루프로 돌고있음)
+웹 서버 - 아파치 톰캣 (자바) 구동, 정적 - 동적으로 바꿔주기위해 jsp사용 (일명 미들웨어 Web Application Server (WAS))
+
+* 자바쓰는 이유 - 보안이 좋음 - 2중 컴파일이라 - 언어가 서블릿 기반이라 - 까도 bite 코드로 되어있어서 못알아들음
+
+멀티쓰레드
+
+웹은 느리다 (TCP) 쓰리웨이 핸드쉐이킹
+빠름 (UDP) 지하철같음 타는놈이 알아서 타야됨 티비송출처럼 
+
+JSP는 Servlet으로 작동 됨(instance) (변환해서)
+
+웹 = 브라우저(크롬 - 개발자도구 잘 구성이 되어있음)
+session 연결 각각 다름 (edge, chrome)
+
+클라이언트(브라우저) - 서버(웹서버) = url 타고
+웹서버가 하는 일 (https://www.google.com/)까지만 전하고 이후는 각 서블릿이 작업 하는 것 - parameter(매개변수)(jsp에서 사용)
+
+
+매개변수 - 관여할수 있도록 하게 하는 매개체
+외부변수
+내부변수
+스코프
+return
+
+* 서블릿 라이프 사이클 - 4단계
+instance '생성' - 'init( )' - 'service' :(doGet, doPost( )) - 'destroy( )'   = 스크립트에도 클래스의 정의 형태로 그대로 있어야 함
+
+* 인코딩
+BCD(Binary Coded Decimal) 코드 (62개)
+a-zA-Z0-9
+
+아스키 코드 ( 128개)
+a-zA-Z0-9 + 특수문자 (양수 , 음수 x) - 네트워크
+
+
+EBCDIC (1byte) (256개) (응용소프트웨어)
+(정보의 최소 단위)
+
+자바가 세는 단위 밀리초 1000/1초
+
+LAN 카드 - IP주소 (핸드폰도 있음)
+남의 DB접속 - 계정(권한인증), IP개방
+
+port번호 - 방화벽 (아무나 못들어옴)
+MySql - 3306
+tomcat - 8080
+
+서버 켜질때 First, init 실행 - 인스턴스 올리고
+서버 새로고침 - doGet - method 접근
+
+
+[객체지향의 특징 5가지]
+상속 - 추상화 - 다형성 - 캡슐화 - 정보은닉
+객체지향 <=> 절차지향
+
+[JSP] 크게 세가지
+[script]
+ : 자바실행구문을 작성하기위해 사용
+1) 지시어 - 디렉티브 <%@  %> - import (협약)
+ : 땡겨쓰는것 | 지시, 정의, 설정이 주목적
+
+2) 스크립팅
+ :  클래스의 정의부 - 선언(declaration)   <%!   %>
+    - 변수, 메소드 가능
+    - 메소드 안에 메소드 생성 불가 (정의부)
+    - 메소드 안에 static 또한 불가
+      연산, 출력 불가
+    - init( ), destroy( ),
+    - 변수 같은것을 넣을 수 없음
+
+    스크립트릿   <%   %>   _jspService( ) - doGet, doPost
+	- 메소드임, 고로 안에 메소드 정의할 수 없음
+	- 내장객체 (request, response -out  = getWriter( )원래 가지고있음)
+    
+    표현식 (expression) - el <%=  %>
+
+[action] tag
+<jsp:include> - 취합
+<jsp:forward> - 넘어감 (같은 url로 사용)
+send.redirect - 
+ : 자바코드를 최대한 제거하겠다.
+
+
+[el]
+
+
+jsp는 servlet 임 
+
+
+[자바 내장객체 9개 - Inplicit Variable]
+1. scoff - 연결 되어있는 동안만 작동
+
+page = this (내 페이지에 해당하는 것)
+[request] 하나 주문하면 처리하고 끝
+[response] 이건 아님
+session 계속 바뀌는 요청
+application 서버 닫을때까지 존재, 서버 닫고 열때 갱신
+=====================================
+out 출력
+config 설정 - servlet 의 초기 설정값 
+pageContext 가장 막강
+exception 예외 처리
+
+[자바 기본 자료형 8개]
+
+
+자바 lts
+자바 11 - 버전이 다르면 배포시 문제가 생김
+무조건적으로 최신버전이 좋은것이 아닌 빌드시킬 환경이 어떻냐에 따라 설정을 다르게 해야함

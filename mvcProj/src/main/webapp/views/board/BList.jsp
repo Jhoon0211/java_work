@@ -29,6 +29,7 @@
 		<td colspan="5" align="center"></td>
 	</tr>
 	<tr>
+		<!-- BWriteForm : DB를 거치지 않아서 사실상 안만들어도 되긴 하는데 만듦 -->
 		<td colspan="5" align="right">
 			<a href="BWriteForm" >글쓰기</a>
 		</td>

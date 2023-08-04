@@ -2,6 +2,7 @@ package model_p;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class BoardDTO {
 
@@ -28,9 +29,30 @@ public class BoardDTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
+
+	// 업로드 된 파일이 없거나, null일 경우
 	public String getUpfile() {
+		
+		 if(upfile==null || 
+		    upfile.trim().equals("") || 
+		    upfile.trim().equals("null")) {
+			upfile = "";
+		}
+		
 		return upfile;
 	}
+	
+	// 이미지 처리
+	// 위에 메서드에서 이미 값이 null일 경우에 대한 처리를 했으므로 고려하지 않아도 됨
+	// Pattern.matches("a", "b") = b중에서 a인것을 찾는다
+	// .* = 앞에 어떤 글자가 있어도 상관이 없다
+	// toLowerCase() = 모든 문자를 소문자로 변환 (확장자가 대문자든, 소문자든 상관없음)
+	public boolean isImg() {
+		boolean res = Pattern.matches(".*[.](jpg|bmp|png|gif)", getUpfile().toLowerCase());
+		
+		return res;
+	}
+	
 	public void setUpfile(String upfile) {
 		this.upfile = upfile;
 	}
