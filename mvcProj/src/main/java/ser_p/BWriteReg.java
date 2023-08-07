@@ -13,6 +13,7 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import control.BoardService;
 import model_p.BoardDAO;
 import model_p.BoardDTO;
+import model_p.PageData;
 
 public class BWriteReg implements BoardService{
 	
@@ -44,10 +45,12 @@ public class BWriteReg implements BoardService{
 			new BoardDAO().write(dto);
 			
 			//System.out.println("newId:" + dto.getId());
+			PageData pd = (PageData)request.getAttribute("pd");
+
 			
 			request.setAttribute("mainPage", "alert");
 			request.setAttribute("msg","입력되었습니다.");
-			request.setAttribute("goUrl","BDetail?id="+dto.getId());
+			request.setAttribute("goUrl","BDetail?id="+dto.getId()+"&page=" + pd.page);
 			
 		} catch (Exception e) {
 			// TODO: handle exception

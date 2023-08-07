@@ -1,9 +1,24 @@
+<%@page import="model_p.PageData"%>
 <%@page import="model_p.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%	BoardDTO dto = (BoardDTO)request.getAttribute("mainData"); %>    
+<%
+	PageData pd = (PageData)request.getAttribute("pd");
+	BoardDTO dto = (BoardDTO)request.getAttribute("mainData");
+%>    
+<!-- 파일 삭제 -->
+<script>
+	function fileDel() {
+		// var myFrm = document.myFrm
+		// alert("눌렀냐?") == 연결 TEST
+		
+		// 삭제 실행 후 BFileDelete로 연결
+		myFrm.action="BFileDelete?page=<%=pd.page %>"
+		myFrm.submit()
+	}
+</script>
 
-<form action="BModifyReg" method="post" enctype="multipart/form-data">
+<form name="myFrm" action="BModifyReg?page=<%=pd.page %>" method="post" enctype="multipart/form-data">
 	<table border="">
 		<tr>
 			<td width="200px">id</td><td width="700px">
@@ -29,6 +44,8 @@
 			<td>암호</td>
 			<td><input type="password" name="pw" /></td>
 		</tr>
+		<!-- 답변 수정에는 파일기능이 존재하지 않게 -->
+		<% if(dto.getSeq()==0) { %>
 		<tr>
 			<td>파일</td>
 			<td>
@@ -36,10 +53,11 @@
 			<% if(dto.getUpfile().equals("")) { %>
 			<input type="file" name="upfile" />
 			<% } else { %>
-				<%=dto.getUpfile() %><input type="button" value="파일삭제"/>
+				<%=dto.getUpfile() %><input type="button" value="파일삭제" onclick="fileDel()"/>
 			<% } %>
 			</td>
 		</tr>
+		<% } %>
 		<tr>
 			<td>내용</td>
 			<td><textarea name="content" id="" cols="30" rows="10"><%=dto.getContent() %></textarea></td>
@@ -48,7 +66,7 @@
 			<td colspan="2" align="center">
 				<input type="submit" value="수정하기"/>
 				<input type="reset" value="초기화"/>
-				<a href="BDetail?id=<%=dto.getId() %>">뒤로</a>
+				<a href="BDetail?id=<%=dto.getId() %>&page=<%=pd.page%>">뒤로</a>
 			</td>
 		</tr>
 	</table>

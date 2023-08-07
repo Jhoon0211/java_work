@@ -15,7 +15,18 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="model_p.BoardDAO"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.net.URLEncoder"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletOutputStream"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
     <fullyQualifiedTypeName name="model_p.BoardDTO"/>
+    <fullyQualifiedTypeName name="model_p.BoardDAO"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxConnection.Close"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxCursor.Close"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxExpect.Close"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxSession.Close"/>
 </qualifiedTypeNameHistroy>

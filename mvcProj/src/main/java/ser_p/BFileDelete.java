@@ -16,7 +16,7 @@ import model_p.BoardDAO;
 import model_p.BoardDTO;
 import model_p.PageData;
 
-public class BModifyReg implements BoardService{
+public class BFileDelete implements BoardService{
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 
@@ -36,6 +36,8 @@ public class BModifyReg implements BoardService{
 					new DefaultFileRenamePolicy() // 이름 중복되면 이름 뒤에 번호 붙여서 처리
 				); // 생성 시 업로드 완료 
 			
+			// 아이디와 패스워드만 가져옴
+			// Delete
 			BoardDTO dto = new BoardDTO();
 			dto.setId(Integer.parseInt(mr.getParameter("id")));
 			dto.setTitle(mr.getParameter("title"));
@@ -49,16 +51,21 @@ public class BModifyReg implements BoardService{
 			
 			System.out.println(dto);
 			
-			if(new BoardDAO().modify(dto) > 0) {
-
-				msg = "수정되었습니다.";
-				goUrl = "BDetail?id=" + dto.getId();
-			} else {
-				// 수정 실패 - 비밀번호가 일치하지 않을경우 사진을 업로드하지 않음
-				if(mr.getFilesystemName("upfile")!=null) {
-					new File(path+"\\" + mr.getFilesystemName("upfile")).delete(); 
-				}
+			// ID / PW / 파일 정보 가져오기
+			BoardDTO delDto = new BoardDAO().idPwChk(dto);
+			
+			// 성공 시
+			if(delDto!=null) {
+		
+				// 파일삭제
+				new File(path+"\\"+delDto.getUpfile()).delete();
+				new BoardDAO().fileDelete(dto); // db통째로 삭제되는 것임
+						
+				msg = "파일이 삭제되었습니다.";
+				//goUrl = "BList";
 			}
+			
+			
 			request.setAttribute("mainPage", "alert");
 			request.setAttribute("msg",msg);
 			request.setAttribute("goUrl",goUrl);

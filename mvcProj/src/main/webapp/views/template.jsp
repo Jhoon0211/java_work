@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
 	
-	String mainUrl = "board/" + request.getAttribute("mainPage") + ".jsp";
+	String mainUrl = request.getAttribute("mainPage") + ".jsp";
 
 %>    
 
